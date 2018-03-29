@@ -19,7 +19,7 @@ function isAnimaInstalled () {
 }
 
 if (!isAnimaInstalled) {
-  log("Anima Toolkit is not installed.")
+  log("Anima Toolkit is not installed or has an old version that doesn't support AnimaAPI.")
   return
 }
 
@@ -44,5 +44,16 @@ AnimaAPI.prepareForExportWithInputDocument_delegate(document, delegate.getClassI
 
 ## How to use with Objective C
 ```
+if ( ! [AnimaAPI class]) {
+  NSLog(@"Anima Toolkit is not installed or has an old version that doesn't support AnimaAPI");
+}
 
+if ( ! [AnimaAPI doesDocumentHaveAnimaProperties:document]) {
+  NSLog(@"Document is not using Anima Toolkit.");
+}
+
+[AnimaAPI prepareForExportWithInputDocument:originalDocument outputPath:nil completionBlock:^(NSDocument *outputDocument, NSError *error) {
+    // do your thing with the stripped document
+    [outputDocument close];
+}];
 ```
