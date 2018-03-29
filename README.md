@@ -5,6 +5,8 @@
 * By using `AnimaAPI` methods, anyone can check if a document has Anima properties in it, and strip them if needed.
 * Stripping Anima's properties is done on a duplicated document to prevent modifying the original document.
 
+[Read the Medium Post](https://medium.com/@AnimaApp/with-great-power-comes-ed8bb3dc5e4d)
+
 ## How to use with Cocoascript
 ```
 @import "MochaJSDelegate"
