@@ -10,8 +10,8 @@
 COScript.currentCOScript().setShouldKeepAround_(true);
 var document = context.document
 var delegate = new MochaJSDelegate()
-delegate.setHandlerForSelector("didFinishPreparingForExport:outputURL:", function(document, outputURL){
-  log(outputURL)
+delegate.setHandlerForSelector("didFinishPreparingForExport:outputPath:", function(document, outputPath) {
+  //   log(outputURL) (do your thing)
   document.close()
   COScript.currentCOScript().setShouldKeepAround_(false);
 });
