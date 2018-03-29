@@ -43,6 +43,7 @@ AnimaAPI.prepareForExportWithInputDocument_delegate(document, delegate.getClassI
 ```
 
 ## How to use with Objective C
+* First drag and drop [AnimaAPI.h](https://github.com/AnimaApp/Sketch-AnimaAPI/blob/master/AnimaAPI.h) into your XCode project.
 ```
 if ( ! [AnimaAPI class]) {
   NSLog(@"Anima Toolkit is not installed or has an old version that doesn't support AnimaAPI");
