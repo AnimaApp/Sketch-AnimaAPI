@@ -15,6 +15,7 @@ function isAnimaInstalled () {
   } catch(e) {
     return false
   }
+}
 
 if (!isAnimaInstalled) {
   log("Anima Toolkit is not installed.")
