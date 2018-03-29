@@ -8,7 +8,25 @@
 ```
 @import "MochaJSDelegate"
 
+function isAnimaInstalled () {
+  try {
+    AnimaAPI
+    return true
+  } catch(e) {
+    return false
+  }
+
+if (!isAnimaInstalled) {
+  log("Anima Toolkit is not installed.")
+  return
+}
+
 var document = context.document
+var documentHasAnimaProperties = AnimaAPI.doesDocumentHaveAnimaProperties(document)
+if (!documentHasAnimaProperties) {
+  log("Document is not using Anima Toolkit.")
+  return
+}
 
 var delegate = new MochaJSDelegate()
 
