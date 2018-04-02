@@ -4,7 +4,7 @@
 * Anima Toolkit for Sketch enables use of [Auto-Layout](https://animaapp.github.io/docs/v1/auto-layout/), [Stacks](https://animaapp.github.io/docs/v1/auto-layout/12-stacks-flexbox.html) and other features that enhance Sketch's functionality.
 * By using `AnimaAPI` methods, anyone can check if a document has Anima properties in it, and strip them if needed.
 * Stripping Anima's properties is done on a duplicated document to prevent modifying the original document.
-* To use `AnimaAPI` class download and install the developer preview version [Download](https://github.com/AnimaApp/Sketch-AnimaAPI/blob/master/AnimaToolkitPlugin-DeveloperPreview/AnimaTookitPlugin.sketchplugin.zip)
+* To use `AnimaAPI` class download and install the developer preview version [Download](https://github.com/AnimaApp/Sketch-AnimaAPI/raw/master/AnimaToolkitPlugin-DeveloperPreview/AnimaTookitPlugin.sketchplugin.zip)
 
 [Read the Medium Post](https://medium.com/@AnimaApp/with-great-power-comes-ed8bb3dc5e4d)
 
