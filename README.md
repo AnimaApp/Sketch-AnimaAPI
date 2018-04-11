@@ -47,18 +47,19 @@ AnimaAPI.prepareForExportWithInputDocument_delegate(document, delegate.getClassI
 ## How to use with Objective C
 * First drag and drop [AnimaAPI.h](https://github.com/AnimaApp/Sketch-AnimaAPI/blob/master/AnimaAPI.h) into your XCode project.
 ```
-if ( ! [AnimaAPI class]) {
-  NSLog(@"Anima Toolkit is not installed or has an old version that doesn't support AnimaAPI");
-  return;
+id<AnimaAPI> anima = (id<AnimaAPI>)NSClassFromString(@"AnimaAPI");
+if ( ! [anima class]) {
+    NSLog(@"Anima Toolkit is not installed or has an old version that doesn't support AnimaAPI");
+    return;
 }
 
-if ( ! [AnimaAPI doesDocumentHaveAnimaProperties:document]) {
-  NSLog(@"Document is not using Anima Toolkit.");
-  return;
+if ( ! [anima doesDocumentHaveAnimaProperties:nil]) {
+    NSLog(@"Document is not using Anima Toolkit.");
+    return;
 }
 
-[AnimaAPI prepareForExportWithInputDocument:originalDocument outputPath:nil completionBlock:^(NSDocument *outputDocument, NSError *error) {
+[anima prepareForExportWithInputDocument:nil outputPath:nil completionBlock:^(NSDocument *outputDocument, NSError *error) {
     // do your thing with the stripped document
     [outputDocument close];
-}];
+    }];
 ```
